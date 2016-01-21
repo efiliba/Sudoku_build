@@ -1,0 +1,16 @@
+﻿<table class="subGrid">
+    <tr ng-repeat="row in grid">
+        <td ng-repeat="column in row.columns">
+            <div ng-if="column.rows">
+                <cell grid="column.rows" column={{$parent.$index}} row={{$parent.$parent.$index}} display-stike-out={{displayStikeOut}} />
+            </div>
+            <div ng-if="column.symbol">
+                <table class="symbol-selected">
+                    <tr>
+                        <td ng-class="viewModel.setMethodClasses[column.setMethod]" ng-click="viewModel.symbolSelected(column.fixed)">{{ column.symbol }}</td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>'

@@ -1,0 +1,7 @@
+﻿<table class="cell">
+    <tr ng-repeat="row in grid">
+        <td ng-repeat="column in row.columns" ng-class="{strikeOut: viewModel.displayStikeOut && column.strikeOut}" ng-click="viewModel.selectSymbol(column.symbol)">
+            {{ column.symbol }}
+        </td>
+    </tr>
+</table>

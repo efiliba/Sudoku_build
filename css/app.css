@@ -1,0 +1,86 @@
+/* app css stylesheet */
+
+body {
+  padding-top: 20px;
+  padding-left:20px;
+}
+
+table.board {
+    border: 2px solid red;
+}
+
+table.subGrid {
+    border: 1px solid blue;
+    min-width: 390px;
+    min-height: 360px;
+}
+
+table.subGrid tr {
+    height: 33%;
+}
+
+table.subGrid td {
+    width: 33%;
+}
+
+table.cell {
+    border: 2px solid green;
+    width: 68px;
+    height: 40px;
+    margin: auto;
+}
+
+table.cell td {
+/*    border: 1px solid yellow;*/
+    padding: 5px 12px 5px 12px;
+}
+
+.symbol-selected {
+    border: 2px solid green;
+    width: 64px;
+    height: 37px;
+    font-size: 50px;
+    color: red;
+    text-align: center;
+    padding-top: 20px;
+    margin: auto;
+}
+
+table{
+    border-width: 1px;
+    border-spacing: 0px;
+    border-style: outset;
+    border-color: gray;
+}
+
+table th {
+    border-width: 1px;
+    padding: 1px;
+    border-style: inset;
+    border-color: gray;
+}
+
+table td {
+    border-width: 1px;
+    padding: 1px;
+    border-style: inset;
+    border-color: gray;
+}
+
+.crossOut .child{
+    position:absolute; 
+    display:block;
+    height:1px; 
+    background:black;
+}
+
+.strikeOut {
+    background-image: url('../img/StrikeOut.png');
+    background-size: 100% 100%;
+/*    text-shadow: 0 1px 0 black; */
+}
+
+.fixed {
+    background-image: url('../img/Circle.png');
+    background-size: 100% 100%;
+}

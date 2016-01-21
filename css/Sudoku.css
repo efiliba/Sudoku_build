@@ -1,0 +1,187 @@
+﻿/*@color1:#06A1C0;
+@color2:#8F4F9F;
+@color3:#ED1D24;
+
+.define(@var) {
+  @colorSet: 'color@{var}';
+}
+
+
+color_@{index}
+ {
+    .define(@index);
+    color: @@colorSet;
+}
+*/
+/*.boardRows(@ratio) {
+    tr {
+        height: @ratio;
+
+        td {
+            width: @ratio;
+        }
+    }
+}
+*/
+html {
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  line-height: normal;
+  height: 100%;
+}
+
+#sudokuBoard {
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+
+slider {
+  position: absolute;
+  width: 177px;
+  height: 100%;
+  right: -160px;
+  background-color: transparent;
+  opacity: 0.8;
+}
+
+slider.sliderOpen {
+  border-left: 1px inset black;
+}
+
+settings {
+  display: block;
+  margin-left: 17px;
+}
+
+settings select {
+  width: 40px;
+}
+
+table.grid {
+  border: 5px inset red;
+  border-collapse: separate;
+  border-spacing: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+table.grid tr:first-child:nth-last-child( 2),
+table.grid tr:first-child:nth-last-child( 2) ~ tr {
+  height: 50%;
+}
+
+table.grid tr:first-child:nth-last-child( 3),
+table.grid tr:first-child:nth-last-child( 3) ~ tr {
+  height: 33.333333333333336%;
+}
+
+table.grid tr:first-child:nth-last-child( 4),
+table.grid tr:first-child:nth-last-child( 4) ~ tr {
+  height: 25%;
+}
+
+table.grid td:first-child:nth-last-child( 2),
+table.grid td:first-child:nth-last-child( 2) ~ td {
+  width: 50%;
+}
+
+table.grid td:first-child:nth-last-child( 3),
+table.grid td:first-child:nth-last-child( 3) ~ td {
+  width: 33.333333333333336%;
+}
+
+table.grid td:first-child:nth-last-child( 4),
+table.grid td:first-child:nth-last-child( 4) ~ td {
+  width: 25%;
+}
+
+table.grid > tbody > tr > td > table.subGrid {
+  border: 4px inset blue;
+  border-collapse: separate;
+  border-spacing: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+table.grid > tbody > tr > td > table.subGrid > tbody > tr > td div {
+  height: 100%;
+}
+
+table.grid > tbody > tr > td > table.subGrid > tbody > tr > td table {
+  border-collapse: separate;
+  border-spacing: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+table.grid > tbody > tr > td > table.subGrid > tbody > tr > td table.cell {
+  border: 3px inset green;
+}
+
+table.grid > tbody > tr > td > table.subGrid > tbody > tr > td table.cell tr > td {
+  border: 2px inset gray;
+  text-align: center;
+}
+
+table.grid > tbody > tr > td > table.subGrid > tbody > tr > td table.cell tr > td.strikeOut {
+  background-image: url(../img/StrikeOut.png);
+  background-size: 100% 100%;
+  /*    text-shadow: 0 1px 0 black; */
+}
+
+table.grid > tbody > tr > td > table.subGrid > tbody > tr > td table.symbol-selected {
+  border: 3px inset yellow;
+  font-size: 40px;
+  color: red;
+  text-align: center;
+}
+
+table.grid > tbody > tr > td > table.subGrid > tbody > tr > td table.symbol-selected .loaded {
+  background-image: url(../img/Sphere.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: yellow;
+}
+
+table.grid > tbody > tr > td > table.subGrid > tbody > tr > td table.symbol-selected .user {
+  background-image: url(../img/Sphere.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: white;
+}
+
+table.grid > tbody > tr > td > table.subGrid > tbody > tr > td table.symbol-selected .calculated {
+  background-image: url(../img/Sphere.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: green;
+}
+
+.toggle {
+  -webkit-transition: linear 1s;
+  -moz-transition: linear 1s;
+  -ms-transition: linear 1s;
+  -o-transition: linear 1s;
+  transition: linear 1s;
+}
+
+.toggle.ng-enter {
+  opacity: 0;
+}
+
+.toggle.ng-enter-active {
+  opacity: 1;
+}
+
+.toggle.ng-leave {
+  opacity: 1;
+}
+
+.toggle.ng-leave-active {
+  opacity: 0;
+}

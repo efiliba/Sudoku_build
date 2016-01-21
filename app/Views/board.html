@@ -1,0 +1,7 @@
+﻿<table class="grid">
+    <tr ng-repeat="row in viewModel.board.rows">
+        <td ng-repeat="column in row.columns">
+            <sub-grid grid="column.rows" column={{$index}} row={{$parent.$index}} display-stike-out={{settings.displayStikeOut}}></sub-grid>
+        </td>
+    </tr>
+</table>

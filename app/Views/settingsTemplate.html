@@ -1,0 +1,6 @@
+﻿<div class="content">
+    Columns:<select ng-model="settings.selectedColumns" ng-options="v for v in viewModel.columnValues" />
+    Rows:<select ng-model="settings.selectedRows" ng-options="v1 for v1 in viewModel.rowValues" />
+    <br />
+    <button ng-click="settings.reset();">Reset</button>
+</div>');
