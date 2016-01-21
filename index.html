@@ -1,0 +1,81 @@
+﻿<!doctype html>
+<html lang="en" ng-app="sudoku">
+<head>
+    <meta charset="utf-8">
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Sudoku.min.css">
+</head>
+<body>
+    <div id="sudokuBoard" ng-view></div>
+
+    <slider ng-class="{sliderOpen: viewModel.sliderOpen}">
+        <input type="button" value="«" ng-click="viewModel.slide()" />
+        <settings></settings>
+    </slider>
+
+        <!--<div id="testCombinations">Combination Tests:</div>
+        <div id="testBitUtilities">BitUtilities Tests:</div>-->
+        <!--<div id="testCell">Cell Tests:</div>-->
+        <!--<div id="testSubGrid">SubGrid Tests:</div>
+        <div id="testGrid">Grid Tests:</div>
+        <div id="testJson">JSON Tests:</div>-->
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-animate.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>            <!--1.11.5-->
+        <!--<script src="lib/angular/angular.js"></script>
+        <script src="lib/angular/angular-route.js"></script>
+        <script src="lib/angular/angular-resource.min.js"></script-->
+    
+        <script src="app/Services/Service.js"></script>
+        <script src="app/Services/SettingsService.js"></script>
+        <script src="app/Controllers/BoardController.js"></script>
+        <script src="app/Directives/SubGridDirective.js"></script>
+        <script src="app/Directives/CellDirective.js"></script>
+        <script src="app/Directives/SliderDirective.js"></script>
+        <script src="app/Directives/SettingsDirective.js"></script>
+
+        <script src="app/Utilities/Combinations.js"></script>
+        <script src="app/Utilities/BitUtilities.js"></script>
+        <script src="app/Models/Cell.js"></script>
+        <script src="app/Models/SubGrid.js"></script>
+        <script src="app/Models/Grid.js"></script>
+
+        <script src="app/app.js"></script>
+
+        <!--<script src="tests/TestCombinations.js"></script>
+        <script src="tests/TestBitUtilities.js"></script>-->
+        <!--<script src="tests/TestCell2.js"></script>-->
+        <!--<script src="tests/TestSubGrid.js"></script>
+        <script src="tests/TestGrid.js"></script>-->
+
+        <script type="text/javascript">
+            //var combinationTest = new Tests.Combinations();
+            //var result = combinationTest.run();
+            //document.getElementById('testCombinations').textContent = "Combination test passed: " + result;
+
+            //var bitUtilitiesTest = new Tests.BitUtilities();
+            //result = bitUtilitiesTest.run();
+            //document.getElementById('testBitUtilities').textContent = "BitUtilities test passed: " + result;
+
+            //var cellTest = new Tests.Cell();
+            //result = cellTest.run();
+            //document.getElementById('testCell').textContent = "Cell test passed: " + result;
+
+            //var subGridTest = new Tests.SubGrid();
+            //result = subGridTest.run();
+            //document.getElementById('testSubGrid').textContent = "SubGrid test passed: " + result;
+
+            //var gridTest = new Tests.Grid();
+            //result = gridTest.run();
+            //document.getElementById('testGrid').textContent = "Grid test passed: " + result;
+
+            //document.getElementById('testJson').textContent = cellTest.toJson();
+        </script>
+</body>
+
+</html>
