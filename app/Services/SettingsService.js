@@ -4,8 +4,8 @@ var Sudoku;
     var SettingsService = (function () {
         function SettingsService($rootScope) {
             var settings = {
-                selectedColumns: 2,
-                selectedRows: 2,
+                selectedColumns: 3,
+                selectedRows: 3,
                 autoSolve: true,
                 displayStikeOut: true,
                 reset: function () {
